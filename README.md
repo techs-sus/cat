@@ -1,5 +1,3 @@
 # rolbox
 
-rolbox is a really stupid trollbox client for roblox
-
-rolbox is a really stupid name, give me a better one in pr (pls!)
+rolbox is a random thing; idk what it is!
