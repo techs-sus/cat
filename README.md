@@ -1,2 +1,5 @@
 # rolbox
-trollbox in roblox but with more effort
+
+rolbox is a really stupid trollbox client for roblox
+
+rolbox is a really stupid name, give me a better one in pr (pls!)
