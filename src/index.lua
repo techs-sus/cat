@@ -1,3 +1,7 @@
+--[[
+	A module to assist with MemoryStoreService.
+]]
+
 local HttpService = game:GetService("HttpService")
 local MemoryStoreService = game:GetService("MemoryStoreService")
 local cat: cat = {}
@@ -16,12 +20,11 @@ type signal = {
 	new: (self: signal) -> signal,
 	DisconnectAll: (self: signal) -> (),
 }
-
-function cat.new(protected: string, signal: any?)
+function cat.new(protected: string)
 	local self = setmetatable({
 		_name = protected,
 		_map = MemoryStoreService:GetSortedMap(protected),
-		_signal = signal or loadstring(HttpService:GetAsync("https://gist.githubusercontent.com/stravant/b75a322e0919d60dde8a0316d1f09d2f/raw/4961e32d9dd157d83bd7fdeae765650e107f302e/GoodSignal.lua"))()		
+		_signal = loadstring(HttpService:GetAsync("https://gist.githubusercontent.com/stravant/b75a322e0919d60dde8a0316d1f09d2f/raw/4961e32d9dd157d83bd7fdeae765650e107f302e/GoodSignal.lua"))()		
 	}, cat)
 	local last
 	task.spawn(function()
@@ -47,6 +50,7 @@ function cat.new(protected: string, signal: any?)
 	return self
 end
 
+-- setup listener signal
 function cat:listenToName(channel: string)
 	local signal = self._signal.new()
 	self._signals[channel] = signal
