@@ -64,3 +64,5 @@ function cat:sendAsync(channel: string, json: table)
 	-- encode table to json and set
 	return pcall(self._map.SetAsync, self._map, channel + " " + game.JobId, HttpService:JSONEncode(json), 5)
 end
+
+return cat
