@@ -10,7 +10,10 @@ cat.__index = cat
 type cat = {
 	_signal: signal,
 	_map: MemoryStoreSortedMap,
-	_name: string
+	_name: string,
+	new: (protected: string) -> cat,
+	listenToName: (self: cat, channel: string) -> signal,
+	sendAsync: (self: cat, channel: string) -> ()
 }
 
 type signal = {
