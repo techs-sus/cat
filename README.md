@@ -1,3 +1,7 @@
-# rolbox
+# cat
 
-rolbox is a random thing; idk what it is!
+cat is a _fast_ `MemoryStoreService` wrapper.
+
+it is a wrapper for `MemoryStoreService`, which is insanely plentiful with api calls.
+
+do not ever touch \_ variables
